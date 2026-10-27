@@ -19,11 +19,12 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
   };
 
   const navItems = [
-    { id: 'simulador', label: 'Simulador Interativo' },
+    { id: 'simulador', label: 'Simulador' },
     { id: 'codigo', label: 'Código Python' },
-    { id: 'fluxograma', label: 'Fluxograma Condicional' },
-    { id: 'explicacao', label: 'Explicação dos Componentes' },
-    { id: 'como-rodar', label: 'Como Executar no PC' },
+    { id: 'fluxograma', label: 'Fluxograma' },
+    { id: 'explicacao', label: 'Explicações' },
+    { id: 'como-rodar', label: 'Como Executar' },
+    { id: 'readme', label: 'README GitHub' },
   ];
 
   return (

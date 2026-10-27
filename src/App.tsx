@@ -6,7 +6,8 @@ import { ConditionalFlowchart } from './components/ConditionalFlowchart';
 import { ComponentsGuide } from './components/ComponentsGuide';
 import { HowToRunGuide } from './components/HowToRunGuide';
 import { PracticeChallenges } from './components/PracticeChallenges';
-import { Terminal, Code2, GitBranch, BookOpen, Laptop, Sparkles, ChevronRight } from 'lucide-react';
+import { ReadmeViewer } from './components/ReadmeViewer';
+import { Terminal, Code2, GitBranch, BookOpen, Laptop, Sparkles, ChevronRight, Github } from 'lucide-react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('simulador');
@@ -102,7 +103,20 @@ export default function App() {
                 }`}
               >
                 <Laptop className="w-3.5 h-3.5" />
-                <span>Como Executar no PC</span>
+                <span>Como Executar</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setActiveTab('readme')}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-colors cursor-pointer ${
+                  activeTab === 'readme'
+                    ? 'bg-indigo-600 text-white'
+                    : 'bg-white/10 hover:bg-white/20 text-slate-200'
+                }`}
+              >
+                <Github className="w-3.5 h-3.5" />
+                <span>README GitHub</span>
               </button>
             </div>
           </div>
@@ -185,6 +199,12 @@ export default function App() {
           <div className="space-y-8">
             <HowToRunGuide />
             <PracticeChallenges />
+          </div>
+        )}
+
+        {activeTab === 'readme' && (
+          <div className="space-y-8">
+            <ReadmeViewer />
           </div>
         )}
       </main>
