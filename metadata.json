@@ -1,0 +1,6 @@
+{
+  "name": "Calculadora em Python - Guia & Simulador",
+  "description": "Aprenda a criar uma calculadora simples em Python com estruturas condicionais, explicações passo a passo e simulador interativo de código.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
